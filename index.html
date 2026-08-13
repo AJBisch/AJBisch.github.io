@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Pay Attention — Andrew Bisch</title>
@@ -12,16 +13,9 @@
     content="Pay Attention. Research and writing by Andrew Bisch."
   >
 
-  <!-- Google Scholar / scholarly metadata -->
-  <meta
-    name="citation_title"
-    content="Two Thirds of the Vertices of a Minimal Counterexample to the Erdős–Gyárfás Conjecture are Cubic"
-  >
-  <meta name="citation_author" content="Andrew Bisch">
-  <meta name="citation_publication_date" content="2026/07/25">
-  <meta
-    name="citation_pdf_url"
-    content="https://ajbisch.github.io/two_thirds_Erdos.pdf"
+  <link
+    rel="canonical"
+    href="https://ajbisch.github.io/"
   >
 
   <style>
@@ -131,6 +125,16 @@
       margin: 0 0 10px;
     }
 
+    .paper-title a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .paper-title a:hover {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
     .paper-meta {
       color: var(--muted);
       margin: 0 0 18px;
@@ -213,7 +217,10 @@
 
     <header>
 
-      <h1>Pay<br>Attention.</h1>
+      <h1>
+        Pay<br>
+        Attention.
+      </h1>
 
       <p class="intro">
         <strong>Andrew Bisch</strong><br>
@@ -230,8 +237,10 @@
       <article>
 
         <h3 class="paper-title">
-          Two Thirds of the Vertices of a Minimal Counterexample
-          to the Erdős–Gyárfás Conjecture are Cubic
+          <a href="papers/erdos-gyarfas.html">
+            Two Thirds of the Vertices of a Minimal Counterexample
+            to the Erdős–Gyárfás Conjecture are Cubic
+          </a>
         </h3>
 
         <p class="paper-meta">
@@ -239,6 +248,10 @@
         </p>
 
         <div class="paper-links">
+
+          <a href="papers/erdos-gyarfas.html">
+            Paper
+          </a>
 
           <a href="two_thirds_Erdos.pdf">
             PDF
