@@ -1,22 +1,33 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Pay Attention — Andrew Bisch</title>
+  <title>Andrew Bisch — Research | Pay Attention</title>
+  <meta name="author" content="Andrew Bisch">
+  <meta name="description" content="Research by Andrew Bisch, including papers, notes, and Lean formalizations in mathematics.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://ajbisch.github.io/">
 
-  <meta
-    name="description"
-    content="Pay Attention. Research and writing by Andrew Bisch."
-  >
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Andrew Bisch — Research | Pay Attention">
+  <meta property="og:description" content="Research by Andrew Bisch, including papers, notes, and Lean formalizations in mathematics.">
+  <meta property="og:url" content="https://ajbisch.github.io/">
 
-  <link
-    rel="canonical"
-    href="https://ajbisch.github.io/"
-  >
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Andrew Bisch",
+    "url": "https://ajbisch.github.io/",
+    "sameAs": [
+      "https://github.com/AJBisch",
+      "https://www.linkedin.com/in/andrew-bisch-a0868a332/",
+      "https://x.com/1PayAttention"
+    ]
+  }
+  </script>
 
   <style>
     :root {
@@ -26,29 +37,16 @@
       --link: #1769e0;
       --background: #fff;
     }
-
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       background: var(--background);
       color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                   Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
       line-height: 1.55;
     }
-
-    .container {
-      width: min(760px, calc(100% - 48px));
-      margin: 0 auto;
-    }
-
-    nav {
-      border-bottom: 1px solid var(--line);
-    }
-
+    .container { width: min(760px, calc(100% - 48px)); margin: 0 auto; }
+    nav { border-bottom: 1px solid var(--line); }
     .nav-inner {
       min-height: 74px;
       display: flex;
@@ -56,7 +54,6 @@
       justify-content: space-between;
       gap: 24px;
     }
-
     .brand {
       font-family: Georgia, "Times New Roman", serif;
       font-size: 1.45rem;
@@ -64,27 +61,10 @@
       color: var(--text);
       text-decoration: none;
     }
-
-    .nav-links {
-      display: flex;
-      gap: 22px;
-      font-size: 0.95rem;
-    }
-
-    .nav-links a {
-      color: var(--text);
-      text-decoration: none;
-    }
-
-    .nav-links a:hover {
-      text-decoration: underline;
-      text-underline-offset: 4px;
-    }
-
-    header {
-      padding: 72px 0 60px;
-    }
-
+    .nav-links { display: flex; gap: 22px; font-size: 0.95rem; }
+    .nav-links a { color: var(--text); text-decoration: none; }
+    .nav-links a:hover { text-decoration: underline; text-underline-offset: 4px; }
+    header { padding: 72px 0 60px; }
     h1 {
       font-family: Georgia, "Times New Roman", serif;
       font-size: clamp(3rem, 8vw, 5rem);
@@ -92,22 +72,9 @@
       letter-spacing: -0.045em;
       margin: 0 0 26px;
     }
-
-    .intro {
-      font-size: 1.15rem;
-      color: #333;
-      margin: 0;
-    }
-
-    .intro strong {
-      color: var(--text);
-    }
-
-    section {
-      padding: 34px 0;
-      border-top: 1px solid var(--line);
-    }
-
+    .intro { font-size: 1.15rem; color: #333; margin: 0; }
+    .intro strong { color: var(--text); }
+    section { padding: 34px 0; border-top: 1px solid var(--line); }
     h2 {
       font-size: 0.82rem;
       text-transform: uppercase;
@@ -116,7 +83,6 @@
       font-weight: 600;
       margin: 0 0 30px;
     }
-
     .paper-title {
       font-family: Georgia, "Times New Roman", serif;
       font-size: 1.65rem;
@@ -124,46 +90,13 @@
       letter-spacing: -0.015em;
       margin: 0 0 10px;
     }
-
-    .paper-title a {
-      color: var(--text);
-      text-decoration: none;
-    }
-
-    .paper-title a:hover {
-      text-decoration: underline;
-      text-underline-offset: 4px;
-    }
-
-    .paper-meta {
-      color: var(--muted);
-      margin: 0 0 18px;
-    }
-
-    .paper-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-
-    .paper-links a,
-    .social-links a {
-      color: var(--link);
-      text-decoration: none;
-    }
-
-    .paper-links a:hover,
-    .social-links a:hover {
-      text-decoration: underline;
-      text-underline-offset: 4px;
-    }
-
-    .social-links {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
+    .paper-title a { color: var(--text); text-decoration: none; }
+    .paper-title a:hover { text-decoration: underline; text-underline-offset: 4px; }
+    .paper-meta { color: var(--muted); margin: 0 0 18px; }
+    .paper-links { display: flex; flex-wrap: wrap; gap: 16px; }
+    .paper-links a, .social-links a { color: var(--link); text-decoration: none; }
+    .paper-links a:hover, .social-links a:hover { text-decoration: underline; text-underline-offset: 4px; }
+    .social-links { display: flex; gap: 20px; flex-wrap: wrap; }
     footer {
       margin-top: 40px;
       padding: 28px 0 48px;
@@ -171,148 +104,59 @@
       color: var(--muted);
       font-size: 0.88rem;
     }
-
     @media (max-width: 600px) {
-      .nav-inner {
-        align-items: flex-start;
-        flex-direction: column;
-        padding: 20px 0;
-        gap: 10px;
-      }
-
-      header {
-        padding: 54px 0 46px;
-      }
-
-      h1 {
-        font-size: 3.6rem;
-      }
+      .nav-inner { align-items: flex-start; flex-direction: column; padding: 20px 0; gap: 10px; }
+      header { padding: 54px 0 46px; }
+      h1 { font-size: 3.6rem; }
     }
   </style>
 </head>
-
-
 <body>
-
   <nav>
     <div class="container nav-inner">
-
-      <a class="brand" href="/">
-        Pay Attention
-      </a>
-
+      <a class="brand" href="/">Pay Attention</a>
       <div class="nav-links">
         <a href="#research">Research</a>
         <a href="https://x.com/1PayAttention">X</a>
-        <a href="https://www.linkedin.com/in/andrew-bisch-a0868a332/">
-          LinkedIn
-        </a>
+        <a href="https://www.linkedin.com/in/andrew-bisch-a0868a332/">LinkedIn</a>
       </div>
-
     </div>
   </nav>
 
-
   <main class="container">
-
     <header>
-
-      <h1>
-        Pay<br>
-        Attention.
-      </h1>
-
-      <p class="intro">
-        <strong>Andrew Bisch</strong><br>
-        Independent researcher.
-      </p>
-
+      <h1>Pay<br>Attention.</h1>
+      <p class="intro"><strong>Andrew Bisch</strong><br>Independent researcher.</p>
     </header>
 
-
     <section id="research">
-
       <h2>Research</h2>
-
       <article>
-
         <h3 class="paper-title">
-          <a href="papers/erdos-gyarfas.html">
-            Two Thirds of the Vertices of a Minimal Counterexample
-            to the Erdős–Gyárfás Conjecture are Cubic
-          </a>
+          <a href="papers/erdos-gyarfas.html">Two Thirds of the Vertices of a Minimal Counterexample to the Erdős–Gyárfás Conjecture are Cubic</a>
         </h3>
-
-        <p class="paper-meta">
-          Andrew Bisch · July 2026
-        </p>
-
+        <p class="paper-meta">Andrew Bisch · 25 July 2026</p>
         <div class="paper-links">
-
-          <a href="papers/erdos-gyarfas.html">
-            Paper
-          </a>
-
-          <a href="two_thirds_Erdos.pdf">
-            PDF
-          </a>
-
-          <a href="EGC.lean">
-            Lean verification
-          </a>
-
-          <a href="https://zenodo.org/records/21574476">
-            Zenodo
-          </a>
-
-          <a href="https://doi.org/10.5281/zenodo.21574476">
-            DOI
-          </a>
-
+          <a href="papers/erdos-gyarfas.html">Paper</a>
+          <a href="papers/two_thirds_Erdos.pdf">PDF</a>
+          <a href="EGC.lean">Lean verification</a>
+          <a href="https://zenodo.org/records/21574476">Zenodo</a>
+          <a href="https://doi.org/10.5281/zenodo.21574476">DOI</a>
         </div>
-
       </article>
-
     </section>
-
 
     <section>
-
       <h2>Elsewhere</h2>
-
       <div class="social-links">
-
-        <a href="https://x.com/1PayAttention">
-          X / @1PayAttention
-        </a>
-
-        <a href="https://www.linkedin.com/in/andrew-bisch-a0868a332/">
-          LinkedIn
-        </a>
-
-        <a href="https://github.com/AJBisch">
-          GitHub
-        </a>
-
-        <a href="https://lendpathway.com/">
-          LendPathway — Co-founder
-        </a>
-
+        <a href="https://x.com/1PayAttention">X / @1PayAttention</a>
+        <a href="https://www.linkedin.com/in/andrew-bisch-a0868a332/">LinkedIn</a>
+        <a href="https://github.com/AJBisch">GitHub</a>
+        <a href="https://lendpathway.com/">LendPathway — Co-founder</a>
       </div>
-
     </section>
-
   </main>
 
-
-  <footer>
-
-    <div class="container">
-      Andrew Bisch
-    </div>
-
-  </footer>
-
+  <footer><div class="container">Andrew Bisch</div></footer>
 </body>
-
 </html>
