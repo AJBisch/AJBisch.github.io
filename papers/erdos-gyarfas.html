@@ -6,16 +6,39 @@
 
   <title>Two Thirds of the Vertices of a Minimal Counterexample to the Erdős–Gyárfás Conjecture are Cubic — Andrew Bisch</title>
 
-  <meta name="description" content="Two Thirds of the Vertices of a Minimal Counterexample to the Erdős–Gyárfás Conjecture are Cubic, by Andrew Bisch.">
-
+  <meta name="author" content="Andrew Bisch">
+  <meta name="description" content="Two Thirds of the Vertices of a Minimal Counterexample to the Erdős–Gyárfás Conjecture are Cubic, by Andrew Bisch. Published 25 July 2026.">
+  <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://ajbisch.github.io/papers/erdos-gyarfas.html">
 
-  <!-- Google Scholar metadata -->
+  <!-- Google Scholar / Highwire Press metadata -->
   <meta name="citation_title" content="Two Thirds of the Vertices of a Minimal Counterexample to the Erdős–Gyárfás Conjecture are Cubic">
   <meta name="citation_author" content="Andrew Bisch">
   <meta name="citation_publication_date" content="2026/07/25">
-  <meta name="citation_pdf_url" content="https://ajbisch.github.io/two_thirds_Erdos.pdf">
+  <meta name="citation_pdf_url" content="https://ajbisch.github.io/papers/two_thirds_Erdos.pdf">
   <meta name="citation_doi" content="10.5281/zenodo.21574476">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Two Thirds of the Vertices of a Minimal Counterexample to the Erdős–Gyárfás Conjecture are Cubic">
+  <meta property="og:description" content="A research note by Andrew Bisch on minimal counterexamples to the Erdős–Gyárfás conjecture, with Lean verification.">
+  <meta property="og:url" content="https://ajbisch.github.io/papers/erdos-gyarfas.html">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "Two Thirds of the Vertices of a Minimal Counterexample to the Erdős–Gyárfás Conjecture are Cubic",
+    "author": {
+      "@type": "Person",
+      "name": "Andrew Bisch",
+      "url": "https://ajbisch.github.io/"
+    },
+    "datePublished": "2026-07-25",
+    "url": "https://ajbisch.github.io/papers/erdos-gyarfas.html",
+    "sameAs": "https://doi.org/10.5281/zenodo.21574476",
+    "identifier": "https://doi.org/10.5281/zenodo.21574476"
+  }
+  </script>
 
   <style>
     :root {
@@ -24,36 +47,17 @@
       --line: #e5e5e5;
       --link: #1769e0;
     }
-
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       color: var(--text);
       background: white;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                   Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
       line-height: 1.65;
     }
-
-    .container {
-      width: min(780px, calc(100% - 48px));
-      margin: 0 auto;
-    }
-
-    nav {
-      border-bottom: 1px solid var(--line);
-    }
-
-    .nav-inner {
-      min-height: 74px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
+    .container { width: min(780px, calc(100% - 48px)); margin: 0 auto; }
+    nav { border-bottom: 1px solid var(--line); }
+    .nav-inner { min-height: 74px; display: flex; align-items: center; justify-content: space-between; }
     .brand {
       font-family: Georgia, "Times New Roman", serif;
       font-size: 1.4rem;
@@ -61,16 +65,8 @@
       color: var(--text);
       text-decoration: none;
     }
-
-    nav a {
-      color: var(--text);
-      text-decoration: none;
-    }
-
-    article {
-      padding: 70px 0 80px;
-    }
-
+    nav a { color: var(--text); text-decoration: none; }
+    article { padding: 70px 0 80px; }
     .label {
       color: var(--muted);
       text-transform: uppercase;
@@ -79,7 +75,6 @@
       letter-spacing: 0.12em;
       margin-bottom: 20px;
     }
-
     h1 {
       font-family: Georgia, "Times New Roman", serif;
       font-size: clamp(2.4rem, 6vw, 4rem);
@@ -87,39 +82,12 @@
       letter-spacing: -0.035em;
       margin: 0 0 24px;
     }
-
-    .author {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 2px;
-    }
-
-    .date {
-      color: var(--muted);
-      margin-top: 0;
-    }
-
-    .links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      margin: 30px 0 44px;
-    }
-
-    a {
-      color: var(--link);
-    }
-
-    .links a {
-      text-decoration: none;
-    }
-
-    section {
-      border-top: 1px solid var(--line);
-      padding-top: 34px;
-      margin-top: 34px;
-    }
-
+    .author { font-size: 1.1rem; font-weight: 600; margin-bottom: 2px; }
+    .date { color: var(--muted); margin-top: 0; }
+    .links { display: flex; flex-wrap: wrap; gap: 18px; margin: 30px 0 44px; }
+    a { color: var(--link); }
+    .links a { text-decoration: none; }
+    section { border-top: 1px solid var(--line); padding-top: 34px; margin-top: 34px; }
     h2 {
       font-size: 0.82rem;
       text-transform: uppercase;
@@ -127,24 +95,17 @@
       color: var(--muted);
       margin-bottom: 18px;
     }
-
     .abstract {
       font-family: Georgia, "Times New Roman", serif;
       font-size: 1.12rem;
       line-height: 1.75;
     }
-
-    footer {
-      border-top: 1px solid var(--line);
-      padding: 28px 0 48px;
-      color: var(--muted);
-      font-size: 0.88rem;
-    }
+    .doi { overflow-wrap: anywhere; }
+    footer { border-top: 1px solid var(--line); padding: 28px 0 48px; color: var(--muted); font-size: 0.88rem; }
   </style>
 </head>
 
 <body>
-
   <nav>
     <div class="container nav-inner">
       <a class="brand" href="/">Pay Attention</a>
@@ -153,21 +114,16 @@
   </nav>
 
   <main class="container">
-
     <article>
-
       <div class="label">Research</div>
 
-      <h1>
-        Two Thirds of the Vertices of a Minimal Counterexample
-        to the Erdős–Gyárfás Conjecture are Cubic
-      </h1>
+      <h1>Two Thirds of the Vertices of a Minimal Counterexample to the Erdős–Gyárfás Conjecture are Cubic</h1>
 
       <p class="author">Andrew Bisch</p>
-      <p class="date">July 2026</p>
+      <p class="date">25 July 2026</p>
 
       <div class="links">
-        <a href="../two_thirds_Erdos.pdf">PDF</a>
+        <a href="two_thirds_Erdos.pdf">PDF</a>
         <a href="../EGC.lean">Lean verification</a>
         <a href="https://zenodo.org/records/21574476">Zenodo</a>
         <a href="https://doi.org/10.5281/zenodo.21574476">DOI</a>
@@ -175,7 +131,6 @@
 
       <section>
         <h2>Abstract</h2>
-
         <p class="abstract">
           A minimal counterexample to the Erdős–Gyárfás conjecture is a
           graph of minimum possible order and, subject to that, minimum
@@ -193,22 +148,24 @@
 
       <section>
         <h2>Keywords</h2>
-
         <p>
           Erdős–Gyárfás conjecture · cycles of power-of-two length ·
           cubic graphs · minimal counterexamples · extremal graph theory
         </p>
       </section>
 
+      <section>
+        <h2>Citation</h2>
+        <p class="doi">
+          Andrew Bisch, “Two Thirds of the Vertices of a Minimal Counterexample to the Erdős–Gyárfás Conjecture are Cubic,” 25 July 2026. DOI:
+          <a href="https://doi.org/10.5281/zenodo.21574476">10.5281/zenodo.21574476</a>.
+        </p>
+      </section>
     </article>
-
   </main>
 
   <footer>
-    <div class="container">
-      Andrew Bisch · <a href="/">Pay Attention</a>
-    </div>
+    <div class="container">Andrew Bisch · <a href="/">Pay Attention</a></div>
   </footer>
-
 </body>
 </html>
